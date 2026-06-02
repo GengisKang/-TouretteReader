@@ -62,3 +62,20 @@
   letter-spacing: 2.5px;
   text-transform: uppercase;
 }
+
+/* ── Mobile: ControlsBar is taller ── */
+@media (max-width: 640px) {
+  .overlay {
+    bottom: 52px;
+  }
+
+  .utpLetters {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+
+  .utpName {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+}

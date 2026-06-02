@@ -12,12 +12,14 @@ export default function App() {
   const [autoEnabled, setAutoEnabled] = useState(false);
   const [autoSpeed, setAutoSpeed] = useState(2500);
   const [activeId, setActiveId] = useState(articles[0].id);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const activeArticle = articles.find((a) => a.id === activeId);
 
   const handleSelect = (id) => {
     setActiveId(id);
     setAutoEnabled(false);
+    setSidebarOpen(false);
   };
 
   return (
@@ -29,9 +31,23 @@ export default function App() {
         setLinesCount={setLinesCount}
         focusEnabled={focusEnabled}
         setFocusEnabled={setFocusEnabled}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
       />
       <div className={styles.body}>
-        <Sidebar articles={articles} activeId={activeId} onSelect={handleSelect} />
+        {sidebarOpen && (
+          <div
+            className={styles.backdrop}
+            onClick={() => setSidebarOpen(false)}
+            aria-hidden="true"
+          />
+        )}
+        <Sidebar
+          articles={articles}
+          activeId={activeId}
+          onSelect={handleSelect}
+          isOpen={sidebarOpen}
+        />
         <Reader
           article={activeArticle}
           fontSize={fontSize}

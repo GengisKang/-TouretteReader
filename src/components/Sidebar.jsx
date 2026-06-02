@@ -1,8 +1,11 @@
 import styles from './Sidebar.module.css';
 
-export default function Sidebar({ articles, activeId, onSelect }) {
+export default function Sidebar({ articles, activeId, onSelect, isOpen }) {
   return (
-    <nav className={styles.sidebar} aria-label="Lista de artículos">
+    <nav
+      className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}
+      aria-label="Lista de artículos"
+    >
       <p className={styles.heading}>Artículos</p>
       <ul className={styles.list}>
         {articles.map((article) => (

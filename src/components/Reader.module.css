@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
   background: #1a1a1a;
+  min-width: 0;
 }
 
 .readerContent {
@@ -38,4 +39,22 @@
   color: #c8c5be;
   text-align: justify;
   hyphens: auto;
+}
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .readerContent {
+    padding: 32px 36px 120px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .readerContent {
+    padding: 24px 20px 120px;
+  }
+
+  .title {
+    font-size: 19px;
+  }
 }
