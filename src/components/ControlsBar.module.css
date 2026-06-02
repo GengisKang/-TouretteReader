@@ -1,0 +1,84 @@
+.bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  background: #1c1c1c;
+  border-top: 1px solid #2a2a2a;
+  z-index: 20;
+}
+
+.navBtn {
+  width: 30px;
+  height: 28px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #252525;
+  cursor: pointer;
+  font-size: 15px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.navBtn:hover {
+  background: #2e2e2e;
+}
+
+.progress {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  min-width: 64px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.speedSelect {
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #252525;
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.speedSelect:focus {
+  border-color: #1D9E75;
+}
+
+.autoBtn {
+  height: 28px;
+  padding: 0 14px;
+  border: 1.5px solid #333;
+  border-radius: 14px;
+  background: #252525;
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.autoBtn:hover {
+  background: #2e2e2e;
+}
+
+.autoBtn.autoActive {
+  background: #1D9E75;
+  border-color: #1D9E75;
+  color: #fff;
+}

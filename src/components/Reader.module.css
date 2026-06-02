@@ -1,0 +1,41 @@
+.readerWrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.readerContent {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 40px 48px 120px;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e0ddd7;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #272727;
+  margin-bottom: 28px;
+}
+
+.paragraph {
+  margin-bottom: 1.6em;
+  color: #c8c5be;
+  text-align: justify;
+  hyphens: auto;
+}
